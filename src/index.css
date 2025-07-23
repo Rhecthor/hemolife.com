@@ -1,0 +1,16 @@
+.global-background {
+  position: fixed;
+  inset: 0;
+  background: url('./assets/background.jpg') no-repeat center center fixed;
+  background-size: cover;
+  z-index: -2;
+}
+
+.global-background::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  /* Remove backdrop-filter: blur(3px); */
+  background-color: rgba(255, 255, 255, 0.7); /* Increased opacity for more subtle background */
+  z-index: 1;
+}
